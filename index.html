@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#172b32" />
+    <title>FireDrone · Fleet records demo</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20261016-generic-public" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">✳</span
+          ><span><strong>FireDrone</strong><small>FLEET RECORDS</small></span>
+        </div>
+        <div class="workspace-label">WORKSPACE <span id="workspaceName">ENGINEERING</span></div>
+        <nav class="primary-nav">
+          <button type="button" data-nav="fleet" class="nav-item">
+            <span class="nav-symbol">◫</span> <span id="fleetNavLabel">Fleet</span>
+            <span class="nav-count" id="navFleetCount"></span>
+          </button>
+          <button type="button" data-nav="inventory" class="nav-item" id="inventoryNav">
+            <span class="nav-symbol">▦</span> Inventory
+            <span class="nav-count" id="navInventoryCount"></span>
+          </button>
+        </nav>
+        <div class="sidebar-bottom">
+          <span class="sidebar-pulse"></span>
+          <div>
+            <strong>Prototype workspace</strong
+            ><small>Local demo · no live data</small>
+          </div>
+        </div>
+      </aside>
+      <div class="main-column">
+        <header class="topbar">
+          <button
+            type="button"
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <div class="breadcrumb" id="breadcrumb"></div>
+          <div class="topbar-right">
+            <label class="role-switch">View as
+              <select id="roleSelect" aria-label="Choose demo role">
+                <option value="engineering">Engineering</option>
+                <option value="customer">Customer · West</option>
+              </select>
+            </label>
+            <span class="demo-badge">DEMO DATA</span
+            ><span class="user-avatar" title="Example engineer">EK</span>
+          </div>
+        </header>
+        <main id="app" tabindex="-1"></main>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js?v=20261016-generic-public" defer></script>
+  </body>
+</html>
